@@ -128,6 +128,11 @@ namespace func {
             return *this;
         }
 
+        function& operator=(std::nullptr_t) {
+            _clear();
+            return *this;
+        }
+
     public:
         explicit operator bool() const noexcept {
             return _holder != nullptr;
